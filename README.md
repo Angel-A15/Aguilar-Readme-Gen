@@ -29,7 +29,7 @@ For my application to work as intended, I decided to do the following:
 ## Installation
 To use the application, the user will have to copy the repository code down into their console.
 Next, the user will have to change their directory to the copied repo and invoke the application by entering: index.js.
-After answering the prompt questions, then the README will be generated. Finally, the user will have to open the index.html on a browser to view the outcome.
+After answering the prompt questions, then the README will be generated. Finally, the user will have to open the index.html on a browser to view the final product.
 
 ## Preview to Page
 
