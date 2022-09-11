@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Angel-A15/Aguilar-Readme-Gen/issues"
   },
-  "homepage": "https://github.com/Angel-A15/Aguilar-Readme-Gen#readme"
+  "homepage": "https://github.com/Angel-A15/Aguilar-Readme-Gen#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
 }
