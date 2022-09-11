@@ -1,12 +1,13 @@
 # Readme-Generator
 
 ## Project
-As a developer, I want to create an application that generates a README file for me. This would decrease the time spent on creating one myself and increase my time in productivity on the codebase.
+As a developer, I want to create an application that generates a README file for me/others. This would decrease the time spent on creating one myself/others and increase time in productivity on the codebase.
 
 Im building the application based on these credentials:
 
-* After being prompted for information about my application repository then a high-quality, professional README.md is generated with:
-  *the title of my project and sections entitled Description
+* A series of prompts that ask for information from the user to base the README construction
+* After being prompted for information then a high-quality, professional README.md is generated with:
+  * The title of my project and sections entitled Description
   * Table of Contents
   * Installation 
   * Usage
