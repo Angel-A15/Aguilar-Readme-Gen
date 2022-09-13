@@ -1,15 +1,13 @@
 // TODO: Include packages needed for this application
+const inquirer = require('inquirer');
 
-const { default: inquirer } = require("inquirer");
+const fs = require('fs');
 
 // TODO: Create an array of questions for user input
-const questions = [];
 
 //question function
-const promptUser = () => {
+const questions = [
 
-    return inquirer.prompt([
-        
         {
             type: 'input',
             name: 'name', 
@@ -39,33 +37,49 @@ const promptUser = () => {
         {
             type: 'confirm',
             name: 'feature', 
-            message: 'Would ',
-            validate: nameInput => {
-                if (nameInput) {
-                    return true;
-                } else {
-                    console.log('Please insert a description.')
-                    return false;
-                }
-            }
+            message: 'If applicable, include a Table of Contents.(If your README is longer than average, you may want to consider)',
+            default: false
+        },
+        {
+            type: 'confirm',
+            name: 'feature', 
+            message: 'If applicable, include a clear way to install the application. ',
+            default: false
+        },
+        {
+            type: 'confirm',
+            name: 'feature', 
+            message: 'If applicable, include step by step insructions on how to use the application.',
+            default: false
+        },
+        {
+            type: 'confirm',
+            name: 'feature', 
+            message: 'If applicable, include any licenses.(Licenses will appear at the top of the README as a badge)',
+            default: false
+        },
+        {
+            type: 'confirm',
+            name: 'feature', 
+            message: 'If applicable, include a method of contribution.',
+            default: false
+        },
+        {
+            type: 'confirm',
+            name: 'feature', 
+            message: 'If applicable, include tests for your application and examples on how to run them here.',
+            default: false
+        },
+        {
+            type: 'confirm',
+            name: 'feature', 
+            message: 'If applicable, provide a method to reach you for questions.',
+            default: false
         },
         {
             type: 'input',
             name: 'github', 
-            message: 'Enter your GitHub Username (Required).',
-            validate: nameInput => {
-                if (nameInput) {
-                    return true;
-                } else {
-                    console.log('Enter your GitHub username.')
-                    return false;
-                }
-            }
-        },
-        {
-            type: 'input',
-            name: 'github', 
-            message: 'Enter the link to your GitHub profile (Required).',
+            message: 'Enter the link to your GitHub profile (Will display in section: questions).',
             validate: nameInput => {
                 if (nameInput) {
                     return true;
@@ -78,7 +92,7 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'description', 
-            message: 'Please provide your email or another way of contact.',
+            message: 'Please provide your email or another way to reach you.(Will display in section:)',
             validate: nameInput => {
                 if (nameInput) {
                     return true;
@@ -88,8 +102,7 @@ const promptUser = () => {
                 }
             }
         },
-    ]);
-};
+];
 
 //questions for app//title: what is the title of your project
 
@@ -135,10 +148,29 @@ const promptUser = () => {
 
 // TODO: Create a function to write README file
 
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+
+    const template = `name;${data.name}`
+    
+    fs.writeFile(`${fileName}.md`, template, err => {
+        if(err) {
+            return console.log(err);
+        }
+        console.log("Your README file has been generated!")
+    });
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+async function init() {
+    try {
+        const userResponses = await inquirer.prompt(questions);
+        console.log("Your resonses: ", userResponses);
+        
+        
+    }
+    catch(err){console.log(err)}
+
+};
 
 // Function call to initialize app
 init();
