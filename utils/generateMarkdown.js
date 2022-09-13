@@ -1,6 +1,38 @@
-//markdown function for the Readme
+//Markdown function for the Readme
+function generateMarkdown(userResonses, userInfo) {
+  return `# ${data.title}
+  ##License:
+  [![license](https://img.shields)]
+  
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Testing](#testing)
+  - [Questions](#questions)
+
+  ## Description:
+  ${data.description}
+
+  ## Installation:
+  ${data.Installation}
+
+  ## Usage:
+  ${data.usage}
+
+  ## Contribution
+  ${data.contribution}
+
+  ## Testing:
+  ${data.test}
+
+  ## Questions:
+  - Github: [${data.github}](https://github.com/${data.github})
+  - Email: [${data.email}](mailto:user@example.com)
+
+  `;
+
+}
 
 
-// TODO: Create a function to generate markdown for README
 
 module.exports = generateMarkdown;
