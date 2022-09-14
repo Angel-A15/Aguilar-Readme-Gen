@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 
 const fs = require('fs');
 
-const generateMarkdown = require('./utils/generateMarkdown.js');
+const generateMarkdown = require('./generateMarkdown.js');
 
 //Question Function
 const questions = [
@@ -13,8 +13,8 @@ const questions = [
         type: 'input',
         name: 'title', 
         message: 'What is the name of your project?',
-        validate: your_Input => {
-            if (your_input) {
+        validate: yourInput => {
+            if (yourInput) {
                 return true;
             } else {
                 console.log('Please insert a name.')
@@ -166,7 +166,7 @@ function writeToFile(fileName, data) {
 
 // Function to initialize the app
 function init() {
-    
+
     inquirer.prompt(questions)
     .then(function (userInput) {
         console.log(userInput)
