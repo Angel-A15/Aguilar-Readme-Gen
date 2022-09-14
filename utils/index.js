@@ -159,14 +159,14 @@ function writeToFile(fileName, data) {
         if (err){
             return console.log(err);
         }
-     console.log("You can preview your README file!")
+     console.log("Your README file has been generated!")
     });
 
 };
 
 // Function to initialize the app
-
-async function init() {
+function init() {
+    
     inquirer.prompt(questions)
     .then(function (userInput) {
         console.log(userInput)
