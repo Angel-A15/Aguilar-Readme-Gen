@@ -10,10 +10,10 @@ const questions = [
 
         {
             type: 'input',
-            name: 'name', 
+            name: 'title', 
             message: 'What is the name of your project?',
-            validate: nameInput => {
-                if (nameInput) {
+            validate: your_Input => {
+                if (your_input) {
                     return true;
                 } else {
                     console.log('Please insert a name.')
@@ -25,8 +25,8 @@ const questions = [
             type: 'input',
             name: 'description', 
             message: 'Please provide a brief description of your project.',
-            validate: nameInput => {
-                if (nameInput) {
+            validate: your_description => {
+                if (your_description) {
                     return true;
                 } else {
                     console.log('Please insert a description.')
@@ -35,53 +35,103 @@ const questions = [
             }
         },
         {
-            type: 'confirm',
-            name: 'feature', 
+            type: 'input',
+            name: 'Toc', 
             message: 'If applicable, include a Table of Contents.(If your README is longer than average, you may want to consider)',
-            default: false
+            validate: your_Toc => {
+                if (your_Toc) {
+                    return true;
+                } else {
+                    console.log('Please insert a description.')
+                    return false;
+                }
+            }
         },
         {
-            type: 'confirm',
-            name: 'feature', 
-            message: 'If applicable, include a clear way to install the application. ',
-            default: false
+            type: 'input',
+            name: 'installation', 
+            message: 'If applicable, include a clear way to install your project. ',
+            validate: your_installation => {
+                if (your_installation) {
+                    return true;
+                } else {
+                    console.log('Please insert a description.')
+                    return false;
+                }
+            }
         },
         {
-            type: 'confirm',
-            name: 'feature', 
+            type: 'input',
+            name: 'usage', 
             message: 'If applicable, include step by step insructions on how to use the application.',
-            default: false
+            validate: your_usage => {
+                if (your_usage) {
+                    return true;
+                } else {
+                    console.log('Please insert a description.')
+                    return false;
+                }
+            }
         },
         {
-            type: 'confirm',
-            name: 'feature', 
-            message: 'If applicable, include any licenses.(Licenses will appear at the top of the README as a badge)',
-            default: false
+            type: 'checkbox',
+            name: 'license', 
+            message: 'If applicable, include a licenses.(License will appear at the top of the README as a badge)',
+            choices: ['MPL 2.0', 'GNU', 'Apache', 'MIT', 'None of the above', 'N/A'],
+            validate: your_license => {
+                if (your_license) {
+                    return true;
+                } else {
+                    console.log('Please select a license.')
+                    return false;
+                }
+            }
         },
         {
-            type: 'confirm',
-            name: 'feature', 
+            type: 'input',
+            name: 'contribution', 
             message: 'If applicable, include a method of contribution.',
-            default: false
+            validate: your_contribution => {
+                if (your_contribution) {
+                    return true;
+                } else {
+                    console.log('Please provide information on how to contribute.')
+                    return false;
+                }
+            }
         },
         {
-            type: 'confirm',
-            name: 'feature', 
-            message: 'If applicable, include tests for your application and examples on how to run them here.',
-            default: false
-        },
-        {
-            type: 'confirm',
-            name: 'feature', 
-            message: 'If applicable, provide a method to reach you for questions.',
-            default: false
+            type: 'input',
+            name: 'test', 
+            message: 'How does the user test this project?',
+            validate: your_test => {
+                if (your_test) {
+                    return true;
+                } else {
+                    console.log('Explain how to test this project.')
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'github', 
+            message: 'Enter your GitHub Username(Required)',
+            validate: github_input => {
+                if (github_input) {
+                    return true;
+                } else {
+                    console.log('Please enter your GitHub Username.')
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'GhProfile', 
             message: 'Enter the link to your GitHub profile (Will display in section: questions).',
-            validate: nameInput => {
-                if (nameInput) {
+            validate: GhProfile_input => {
+                if (GhProfile_input) {
                     return true;
                 } else {
                     console.log('Enter the link to your GitHub profile.')
@@ -91,13 +141,13 @@ const questions = [
         },
         {
             type: 'input',
-            name: 'description', 
-            message: 'Please provide your email or another way to reach you.(Will display in section:)',
-            validate: nameInput => {
-                if (nameInput) {
+            name: 'email', 
+            message: 'Please provide your email address.',
+            validate: email_input => {
+                if (email_input) {
                     return true;
                 } else {
-                    console.log('Please provide an option of contact.')
+                    console.log('Please provide your email address.')
                     return false;
                 }
             }
