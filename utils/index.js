@@ -36,20 +36,6 @@ const questions = [
             }
         }
     },
-    //Table of Contents
-    {
-        type: 'input',
-        name: 'Toc', 
-        message: 'If applicable, include a Table of Contents.(If your README is longer than average, you may want to consider)',
-        validate: your_Toc => {
-            if (your_Toc) {
-                return true;
-            } else {
-                console.log('Please insert a description.')
-                return false;
-            }
-        }
-    },
     //Installation
     {
         type: 'input',
