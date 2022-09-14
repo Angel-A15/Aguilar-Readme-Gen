@@ -1,7 +1,9 @@
 //Markdown function for the Readme
-function generateMarkdown(userResonses, userInfo) {
+function generateMarkdown(data) {
+
   return `# ${data.title}
-  ##License:
+
+  ## License:
   [![license](https://img.shields)]
 
   ## Table of Contents

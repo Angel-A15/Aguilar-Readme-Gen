@@ -107,27 +107,24 @@ const questions = [
 //Function to construct the README
 function writeToFile(fileName, data) {
 
-    const template = `name;${data.name}`
+    fs.writeFile(fileName, data, (err) => {
 
-    fs.writeFile(`${fileName}.md`, template, err => {
-        if(err) {
+        if (err){
             return console.log(err);
         }
-        console.log("Your README file has been generated!")
+     console.log("You can preview your README file!")
     });
-}
+
+};
 
 // Function to initialize the app
+
 async function init() {
-    try {
-        const userResponses = await inquirer.prompt(questions);
-        console.log("Your resonses: ", userResponses);
-        
-        //Will write the markdown into file
-        await writeFileAsync('ExampleREADME.md', markdown);
-        
-    }
-    catch(err){console.log(err)}
+    inquirer.prompt(questions)
+    .then(function (userInput) {
+        console.log(userInput)
+        writeToFile("README.md", generateMarkdown(userInput));
+    });
 
 };
 
