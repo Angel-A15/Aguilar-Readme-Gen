@@ -1,13 +1,13 @@
-// Packages and links 
+// Packages and Links 
 const inquirer = require('inquirer');
 
 const fs = require('fs');
 
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
-//Question function
+//Question Function
 const questions = [
-
+        //Title
         {
             type: 'input',
             name: 'title', 
@@ -21,6 +21,7 @@ const questions = [
                 }
             }
         },
+        //Description
         {
             type: 'input',
             name: 'description', 
@@ -34,6 +35,7 @@ const questions = [
                 }
             }
         },
+        //Table of Contents
         {
             type: 'input',
             name: 'Toc', 
@@ -47,6 +49,7 @@ const questions = [
                 }
             }
         },
+        //Installation
         {
             type: 'input',
             name: 'installation', 
@@ -60,6 +63,7 @@ const questions = [
                 }
             }
         },
+        //Use
         {
             type: 'input',
             name: 'usage', 
@@ -73,6 +77,7 @@ const questions = [
                 }
             }
         },
+        //License
         {
             type: 'checkbox',
             name: 'license', 
@@ -87,6 +92,7 @@ const questions = [
                 }
             }
         },
+        //Contribution
         {
             type: 'input',
             name: 'contribution', 
@@ -100,6 +106,7 @@ const questions = [
                 }
             }
         },
+        //Test
         {
             type: 'input',
             name: 'test', 
@@ -113,6 +120,7 @@ const questions = [
                 }
             }
         },
+        //GitHub Username
         {
             type: 'input',
             name: 'github', 
@@ -126,6 +134,7 @@ const questions = [
                 }
             }
         },
+        //GitHub Profile
         {
             type: 'input',
             name: 'GhProfile', 
@@ -139,6 +148,7 @@ const questions = [
                 }
             }
         },
+        //Email Address
         {
             type: 'input',
             name: 'email', 
