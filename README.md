@@ -39,5 +39,6 @@ The user will have to copy the project from the repository into their console be
 5. After question prompts, README file will be generated and found in the utils folder
 
 ## Example of Applicaiton
-![GenRSample](https://user-images.githubusercontent.com/106582411/190311471-dc1c0d14-300d-42ba-8f74-2dc4469ea7a0.jpeg)
+https://watch.screencastify.com/v/0EtK2SIzrTNH7lfvzksR
+
 
