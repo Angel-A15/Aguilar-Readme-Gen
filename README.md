@@ -29,9 +29,14 @@ For my application to work as intended, I decided to do the following:
   * Functions that write, copy, and add data in its designated area in the README
 
 ## Installation
-To use the application, the user will have to copy the repository code down into their console.
-Next, the user will have to change their directory to the copied repo and invoke the application by entering: index.js.
-After answering the prompt questions, then the README will be generated. Finally, the user will have to open the index.html on a browser to view the final product.
+The user will have to copy the project from the repository into their console before use
+
+## Usage
+1. Downloaded into user console
+2. In the terminal, change directory into downloaded folder and then change directoy to the internal folder "utils"
+3. User will then enter node index.js to start
+4. Provide information needed to questions prompted
+5. After question prompts, README file will be generated and found in the utils folder
 
 ## Preview to Page
 
