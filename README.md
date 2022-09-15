@@ -21,11 +21,11 @@ Im building the application based on these credentials:
 ## Description
 For my application to work as intended, I decided to do the following:
 
-* 
-*
-* 
-* 
-* 
+* Install of NPM inquirer(package 8.2.4)
+  * Enable the use of third party modules to use for project
+  
+* A codebase with implimication of Node.js and traditional JS:
+ * Gave the ability to construct and run the application from the console
 
 ## Installation
 To use the application, the user will have to copy the repository code down into their console.
